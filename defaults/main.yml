@@ -1,0 +1,5 @@
+---
+# defaults file for get-lc-of-asg
+asg:
+  name   :
+  region :
