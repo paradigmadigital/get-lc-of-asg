@@ -1,0 +1,10 @@
+---
+# tasks file for get-lc-of-asg
+
+- name: Get facts of ASG
+  ec2_asg_facts:
+    name   : "{{ asg.name }}"
+    region : "{{ asg.region }}"
+  register: desired_asg
+
+- set_fact: asg_lc_name="{{ desired_asg['results'][0]['launch_configuration_name'] }}"
